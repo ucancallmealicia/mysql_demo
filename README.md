@@ -64,11 +64,11 @@ Retrieves a distinct box list for a given collection.
 
 ## Use Case 3: Items of a Given Type/Subrecords
 
-Output as input - can make changes to the results of these queries and then use them for something else
+Queries to assist in auditing and/or updating data. Can make changes to the results of these queries and then push changes to ArchivesSpace via the API.
 
-**all_dates.sql**
+**all_ao_dates.sql**
 
-Retrieves a list of all dates and their associated descriptive records.
+Retrieves a list of all dates and their associated descriptive records. Can modify this to find dates with or without structured date fields.
 
 **all_extents.sql**
 
@@ -84,28 +84,36 @@ Retrieves descriptive information for all materials which are housed in Paige bo
 
 Retrieves a list of resource records for which restrictions will expire within the next year.
 
-**acquisitions_report.sql**
+**new_accessions.sql**
 
 Retrieves a list of accession records for materials which were acquired within the last year.
 
-**location_report.sql**
+**new_resources.sql**
+
+Retrieves a list of resource records created after a given time period.
+
+**ao_mod_dates.sql**
+
+Retrieves a list of archival object records created or modified after a given date.
+
+**locations.sql**
 
 Retrieves a list of materials housed in a given location.
 
-**barcode_audit.sql**
+**barcodes.sql**
 
 Retrieves descriptive information for materials housed in a box with a given barcode(s)
 
-**barcode_audit.py**
+**barcodes.py**
 
 Retrieves descriptive information for a user-supplied list of barcodes by running the same query over a spreadsheet containing barcodes.
 
 ## Use Case 5: Linked Records
 
-**linked_subjects.sql**
+**linked_subjects_resources.sql**
 
 Retrieves a list of subject records linked to resource records.
 
-**linked_agents.sql**
+**linked_agents_resources.sql**
 
 Retrieves a list of agent records linked to resource records.
