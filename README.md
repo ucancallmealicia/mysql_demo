@@ -48,6 +48,10 @@ Retrieves a count of languages associated with resource records.
 
 Retrieves a count of each location attached to a top container record. Use this to find out how many containers are stored in each location.
 
+**linked_agent_count.sql**
+
+Retrieves a count of the number of agents linked to each resource record.
+
 ## Use Case 2: Inventories
 
 **all_components.sql**
