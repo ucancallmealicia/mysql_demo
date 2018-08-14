@@ -8,4 +8,3 @@ from subject
 left join enumeration_value ev on ev.id = subject.source_id
 left join subject_rlshp on subject.id = subject_rlshp.subject_id
 join resource on resource.id = subject_rlshp.resource_id
-#and subject_rlshp.resource_id is not null

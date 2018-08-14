@@ -9,5 +9,6 @@ SELECT resource.id
 FROM archival_object ao
 JOIN resource on ao.root_record_id = resource.id
 LEFT JOIN enumeration_value ev on ev.id = ao.level_id
-WHERE resource.id = 4556
+WHERE resource.id = 4223
+#WHERE resource.id = 4556
 ORDER BY ao.id

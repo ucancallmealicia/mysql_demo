@@ -16,6 +16,6 @@ left join instance on sc.instance_id = instance.id
 left join archival_object ao on instance.archival_object_id = ao.id
 left join resource on ao.root_record_id = resource.id
 left join repository on repository.id = resource.repo_id
-WHERE location.title LIKE 'Library Shelving Facility [LSF]'
+WHERE location.title LIKE '%B57-A%'
 AND ao.id is not null
 ORDER BY resource.title
