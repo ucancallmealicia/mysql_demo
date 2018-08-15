@@ -6,10 +6,10 @@ SELECT DISTINCT resource.identifier AS resource_identifier
     , location.title as location
     , repository.name as repository
 from sub_container sc
-left join top_container_link_rlshp tclr on tclr.sub_container_id = sc.id
-left join top_container tc on tclr.top_container_id = tc.id
-left join top_container_housed_at_rlshp tchar on tchar.top_container_id = tc.id
-left join location on tchar.location_id = location.id
+join top_container_link_rlshp tclr on tclr.sub_container_id = sc.id
+join top_container tc on tclr.top_container_id = tc.id
+join top_container_housed_at_rlshp tchar on tchar.top_container_id = tc.id
+join location on tchar.location_id = location.id
 left join top_container_profile_rlshp tcpr on tcpr.top_container_id = tc.id
 left join container_profile cp on cp.id = tcpr.container_profile_id
 left join instance on sc.instance_id = instance.id

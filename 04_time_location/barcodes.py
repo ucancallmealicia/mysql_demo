@@ -17,11 +17,11 @@ def opencsvout():
 
 print('Connecting to database...')
 
-connection = pymysql.connect(host=,
-                             port = ,
-                             user=,
-                             password=,
-                             db=)
+connection = pymysql.connect(host='127.0.0.1',
+                             port=3306 ,
+                             user='amd243',
+                             password='FFmIjc5xLw',
+                             db='archivesspace')
 
 print('Connected!')
 
@@ -30,7 +30,7 @@ cursor = connection.cursor()
 csvfile = opencsv()
 csvoutfile = opencsvout()
 
-headers = ['barcode', 'collection_identifier', 'collection_title', 'container_profile', 'container_number']
+headers = ['barcode_og', 'barcode', 'collection_identifier', 'collection_title', 'container_profile', 'container_number']
 csvoutfile.writerow(headers)
 
 #is there any way to easily add the accession number?

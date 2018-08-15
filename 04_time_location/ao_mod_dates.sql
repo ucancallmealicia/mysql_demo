@@ -8,7 +8,7 @@ select resource.identifier
 	, CONCAT('http://localhost:8080/repositories/', resource.repo_id, '/resources/', resource.id) as resource_url
 	, CONCAT('http://localhost:8080/repositories/', ao.repo_id, '/archival_objects/', ao.id) as ao_url
 from archival_object ao
-left join resource on ao.root_record_id = resource.id
+join resource on ao.root_record_id = resource.id
 left join enumeration_value ev on ev.id = ao.level_id
 order by ao_mod_date desc
 LIMIT 10000

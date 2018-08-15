@@ -12,13 +12,13 @@ SELECT resource.identifier AS resource_identifier
     , sc.indicator_2 AS sc_num
 from sub_container sc
 LEFT JOIN enumeration_value ev on ev.id = sc.type_2_id
-LEFT JOIN top_container_link_rlshp tclr on tclr.sub_container_id = sc.id
-LEFT JOIN top_container tc on tclr.top_container_id = tc.id
-LEFT JOIN top_container_profile_rlshp tcpr on tcpr.top_container_id = tc.id
-LEFT JOIN container_profile cp on cp.id = tcpr.container_profile_id
-LEFT JOIN top_container_housed_at_rlshp tchar on tchar.top_container_id = tc.id
-LEFT JOIN instance on sc.instance_id = instance.id
-LEFT JOIN archival_object ao on instance.archival_object_id = ao.id
-LEFT JOIN resource on ao.root_record_id = resource.id
+JOIN top_container_link_rlshp tclr on tclr.sub_container_id = sc.id
+JOIN top_container tc on tclr.top_container_id = tc.id
+JOIN top_container_profile_rlshp tcpr on tcpr.top_container_id = tc.id
+JOIN container_profile cp on cp.id = tcpr.container_profile_id
+JOIN top_container_housed_at_rlshp tchar on tchar.top_container_id = tc.id
+JOIN instance on sc.instance_id = instance.id
+JOIN archival_object ao on instance.archival_object_id = ao.id
+JOIN resource on ao.root_record_id = resource.id
 LEFT JOIN enumeration_value ev2 on ev2.id = ao.level_id
 WHERE resource.id = 4223

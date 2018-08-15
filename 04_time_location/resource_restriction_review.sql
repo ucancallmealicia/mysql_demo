@@ -4,8 +4,8 @@ SELECT DISTINCT resource.title as title
     , rr.begin
     , rr.end
 FROM note_persistent_id npi
-LEFT JOIN note on note.id = npi.note_id
-LEFT JOIN resource on resource.id = note.resource_id
-LEFT JOIN rights_restriction rr on rr.resource_id = resource.id
+JOIN note on note.id = npi.note_id
+JOIN resource on resource.id = note.resource_id
+JOIN rights_restriction rr on rr.resource_id = resource.id
 WHERE rr.end > '2016-01-01'
 AND rr.restriction_note_type LIKE 'accessrestrict'
