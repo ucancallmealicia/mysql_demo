@@ -17,11 +17,11 @@ def opencsvout():
 
 print('Connecting to database...')
 
-connection = pymysql.connect(host='127.0.0.1',
+connection = pymysql.connect(host=,
                              port=3306 ,
-                             user='amd243',
-                             password='FFmIjc5xLw',
-                             db='archivesspace')
+                             user=,
+                             password=,
+                             db=)
 
 print('Connected!')
 
