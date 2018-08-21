@@ -16,3 +16,4 @@
 # My password file
 
 # System files
+*.DS_Store
